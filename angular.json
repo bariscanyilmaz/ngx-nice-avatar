@@ -100,6 +100,37 @@
           }
         }
       }
+    },
+    "ngx-nice-avatar": {
+      "projectType": "library",
+      "root": "projects/ngx-nice-avatar",
+      "sourceRoot": "projects/ngx-nice-avatar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-nice-avatar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-nice-avatar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-nice-avatar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-nice-avatar/src/test.ts",
+            "tsConfig": "projects/ngx-nice-avatar/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-nice-avatar/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-nice-avatar"

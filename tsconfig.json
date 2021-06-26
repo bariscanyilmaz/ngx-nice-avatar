@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-nice-avatar": [
+        "dist/ngx-nice-avatar/ngx-nice-avatar",
+        "dist/ngx-nice-avatar"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
