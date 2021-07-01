@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'shirt',
+  selector: '[ngx-shirt]',
   template: `
     <svg:g>
     <ng-container *ngIf="shirt == 'Collared'">

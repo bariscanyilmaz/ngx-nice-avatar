@@ -33,16 +33,16 @@ import { Nose } from './components/nose/nose.component';
       <circle cx="190" cy="190" r="190" fill="#FFEDEF" />
     </mask>
     <g mask="url(#mask0)">
-      <face [faceColor]="faceColor" ><beard [beard]="beard" [beardColor]="beardColor"></beard></face>
-      <mouth [mouth]="mouth"></mouth>
-      <eyebrows [eyeBrows]="eyeBrows"></eyebrows>
-      <hair [hair]="hair" [hairColor]="hairColor" ></hair>
-      <eyes [eye]="eye" ></eyes>
-      <glasses [glasses]="glasses"></glasses>
-      <nose [nose]="nose" ></nose>
-      <ear [ear]="ear" [faceColor]="faceColor"></ear>
-      <earring [ear]="ear" [earring]="earring"></earring>
-      <shirt [shirt]="shirt" [shirtColor]="shirtColor"> </shirt>
+      <g ngx-face [faceColor]="faceColor" ><g ngx-beard [beard]="beardType" [beardColor]="beardColor"></g></g>
+      <g ngx-mouth [mouth]="mouth"></g>
+      <g ngx-eyebrows [eyeBrows]="eyeBrows"></g>
+      <g ngx-hair [hair]="hair" [hairColor]="hairColor" ></g>
+      <g ngx-eyes [eye]="eye" ></g>
+      <g ngx-glasses [glasses]="glasses"></g>
+      <g ngx-nose [nose]="nose" ></g>
+      <g ngx-ear [ear]="ear" [faceColor]="faceColor"></g>
+      <g ngx-earring [ear]="ear" [earring]="earring"></g>
+      <g ngx-shirt [shirt]="shirt" [shirtColor]="shirtColor"> </g>
     </g>
     <defs>
       <clipPath id="clip0">
@@ -74,7 +74,7 @@ export class NgxNiceAvatarComponent implements OnInit {
   @Input() eyeBrows!: Eyebrows;
   @Input() eye!: Eyes;
   @Input() mouth!: Mouth;
-  @Input() beard!: Beard;
+  @Input() beardType!: Beard;
   @Input() beardColor!: string;
   @Input() bgColor!: string;
   constructor() { }

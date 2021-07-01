@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'glasses',
+  selector: '[ngx-glasses]',
   template: `
   <svg:g>
     <ng-container *ngIf="glasses == 'Round'">

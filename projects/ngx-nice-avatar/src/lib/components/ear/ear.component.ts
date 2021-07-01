@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 @Component({
-  selector: 'ear',
+  selector: '[ngx-ear]',
   template: `
    <svg:g>
     <ng-container *ngIf="ear == 'Small'">

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 @Component({
-  selector: 'beard',
+  selector: '[ngx-beard]',
   template: `
     <svg:g>
     <ng-container *ngIf="beard == 'Hipster'">

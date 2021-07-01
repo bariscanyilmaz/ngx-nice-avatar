@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'mouth',
+  selector: '[ngx-mouth]',
   template: `
     <svg:g>
     <ng-container *ngIf="mouth == 'Frown'">

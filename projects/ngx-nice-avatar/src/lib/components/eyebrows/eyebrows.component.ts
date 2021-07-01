@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'eyebrows',
+  selector: '[ngx-eyebrows]',
   template: `
     <svg:g>
     <ng-container *ngIf="eyeBrows == 'Eyebrows_Down'">

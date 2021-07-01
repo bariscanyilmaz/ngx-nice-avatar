@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Ear } from '../ear/ear.component';
 
 @Component({
-  selector: 'earring',
+  selector: '[ngx-earring]',
   template: `
   <svg:g>
     <ng-container *ngIf="ear == 'Small' && earring == 'Hoop'">
