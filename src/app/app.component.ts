@@ -1,20 +1,21 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Beard } from 'projects/ngx-nice-avatar/src/lib/components/beard/beard.component';
-import { Hair } from 'projects/ngx-nice-avatar/src/lib/components/hair/hair.component';
-import { Nose } from 'projects/ngx-nice-avatar/src/lib/components/nose/nose.component';
-import { Ear } from 'projects/ngx-nice-avatar/src/lib/components/ear/ear.component';
-import { Earring } from 'projects/ngx-nice-avatar/src/lib/components/earring/earring.component';
-import { Eyebrows } from 'projects/ngx-nice-avatar/src/lib/components/eyebrows/eyebrows.component';
-import { Eyes } from 'projects/ngx-nice-avatar/src/lib/components/eyes/eyes.component';
-import { Mouth } from 'projects/ngx-nice-avatar/src/lib/components/mouth/mouth.component';
-import { Glasses } from 'projects/ngx-nice-avatar/src/lib/components/glasses/glasses.component';
-import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.component';
+import { Beard } from 'ngx-nice-avatar/lib/components/beard/beard.component';
+import { Hair } from 'ngx-nice-avatar/lib/components/hair/hair.component';
+import { Nose } from 'ngx-nice-avatar/lib/components/nose/nose.component';
+import { Ear } from 'ngx-nice-avatar/lib/components/ear/ear.component';
+import { Earring } from 'ngx-nice-avatar/lib/components/earring/earring.component';
+import { Eyebrows } from 'ngx-nice-avatar/lib/components/eyebrows/eyebrows.component';
+import { Eyes } from 'ngx-nice-avatar/lib/components/eyes/eyes.component';
+import { Mouth } from 'ngx-nice-avatar/lib/components/mouth/mouth.component';
+import { Glasses } from 'ngx-nice-avatar/lib/components/glasses/glasses.component';
+import { Shirt } from 'ngx-nice-avatar/lib/components/shirt/shirt.component';
 
 @Component({
   selector: 'app-root',
   template: `
     
-    <!-- Component-->
+  <div class="screen"> 
+    <div class="avatar">
     <ngx-nice-avatar 
     [size]="size" [bgColor]="bgColor" [shirtColor]="shirtColor" 
     [faceColor]="faceColor" [hairColor]="hairColor" [beardColor]="beardColor"
@@ -23,12 +24,12 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
     [glasses]="glasses" [nose]="nose" [hair]="hair" [hairColor]="hairColor" [mouth]="mouth"
     >
     </ngx-nice-avatar>
-    
+    </div>
 
-    <!-- Inputs-->
     <div class="options">
+
       <div>
-        <input type="range" min="60" max="250" #avatarSize [(ngModel)]="size"/>
+        <input type="range" min="60" max="250" [(ngModel)]="size"/>
       </div>
       <div class="buttons">
         <button type="button" (click)="random()">Random</button>
@@ -42,7 +43,7 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
         <h4>Background Color</h4>
         <div>
           <label>
-            <input type="color" name="bgColor" #avatarBGColor [(ngModel)]="bgColor"  />
+            <input type="color" name="bgColor" [(ngModel)]="bgColor"  />
           </label>
         </div>
       </div>
@@ -55,14 +56,13 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
               
               type="radio"
               name="face"
-              #avatarFaceColor
               [value]="value"
               [(ngModel)]="faceColor"
             />
             {{ value }}
           </label>
           <label>
-            <input type="color" name="face" #avatarFaceColor [(ngModel)]="faceColor" />
+            <input type="color" name="face" [(ngModel)]="faceColor" />
           </label>
         </div>
       </div>
@@ -75,7 +75,7 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
             {{ value }}
           </label>
           <label>
-            <input type="color" name="beardColor" #avatarBeardColor [(ngModel)]="beardColor" />
+            <input type="color" name="beardColor" [(ngModel)]="beardColor" />
           </label>
         </div>
       </div>
@@ -84,7 +84,7 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
         <h4>Eyes</h4>
         <div>
           <label *ngFor="let value of eyesValues" >
-            <input type="radio" #avatarEyes name="eyes" [value]="value" [(ngModel)]="eye" />
+            <input type="radio"  name="eyes" [value]="value" [(ngModel)]="eye" />
             {{ value }}
           </label>
         </div>
@@ -97,7 +97,6 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
             <input
               type="radio"
               name="eyeBrows"
-              #avatarEyesBrow
               [value]="value"
               [(ngModel)]="eyeBrow"
             />
@@ -149,7 +148,7 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
             {{ value }}
           </label>
           <label>
-            <input type="color" name="hairColor" #avatarHairColor [(ngModel)]="hairColor" />
+            <input type="color" name="hairColor"  [(ngModel)]="hairColor" />
           </label>
         </div>
       </div>
@@ -158,7 +157,7 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
         <h4>Nose</h4>
         <div>
           <label *ngFor="let value of noseValues" >
-            <input type="radio" name="nose" #avatarNose [value]="value" ngModel="nose" />
+            <input type="radio" name="nose"  [value]="value" [(ngModel)]="nose" />
             {{ value }}
           </label>
         </div>
@@ -187,68 +186,20 @@ import { Shirt } from 'projects/ngx-nice-avatar/src/lib/components/shirt/shirt.c
             {{ value }}
           </label>  
           <label>
-            <input type="color" name="shirtColor" #avatarShirtColor [(ngModel)]="shirtColor" />
+            <input type="color" name="shirtColor"  [(ngModel)]="shirtColor" />
           </label>
         </div>
       </div>
     </div>
+    </div>
   `,
-  styles: [`* {
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font-family: sans-serif;
-  }
-  body {
-    padding: 30px;
-  }
-  .screen {
-    display: grid;
-    grid-gap: 20px;
-  }
-  @media (min-width: 700px) {
-    .screen {
-      grid-template-columns: 260px 1fr;
-    }
-  }
-  .avatar {
-    position: sticky;
-    top: 30px;
-    display: flex;
-    justify-content: center;
-  }
-  .options {
-    display: grid;
-    grid-gap: 20px;
-    justify-items: flex-start;
-  }
-  .options > div {
-    display: grid;
-    grid-gap: 10px;
-  }
-  label {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  button {
-    padding: 4px 6px;
-  }
-  .buttons {
-    display: grid;
-    grid-gap: 10px;
-    grid-auto-flow: column;
-    align-items: center;
-  }`]
+  styles: []
 })
 export class AppComponent implements OnInit {
 
   title = 'ng-nice-avatar';
 
-  size!: number;
+  size: number = 250;
   bgColor!: string;
   shirtColor!: string;
   faceColor!: string;
@@ -307,7 +258,7 @@ export class AppComponent implements OnInit {
   FACE_COLORS = ["#F9C9B6", "#AC6651"];
 
   random() {
-    this.size = (60 + Math.random() * 190);
+
     this.bgColor = this.getRandom(this.BG_COLORS);
     this.faceColor = this.getRandom(this.FACE_COLORS);
     this.beard = this.getRandom((this.beardValues));
