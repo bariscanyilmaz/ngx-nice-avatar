@@ -197,7 +197,7 @@ import { Shirt } from 'ngx-nice-avatar/lib/components/shirt/shirt.component';
 })
 export class AppComponent implements OnInit {
 
-  title = 'ng-nice-avatar';
+  title = 'ngx-nice-avatar';
 
   size: number = 250;
   bgColor!: string;
