@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Hair } from '../../type';
 
 @Component({
   selector: '[ngx-hair]',
@@ -138,5 +139,4 @@ export class HairComponent implements OnInit {
 
 }
 
-export type Hair= 'None'|'Danny_Phantom'|'Doug_Funny'|'Fonza'|'Full'|'Mr_Clean'|'Mr_T'|'Pixie'|'Turban';
   

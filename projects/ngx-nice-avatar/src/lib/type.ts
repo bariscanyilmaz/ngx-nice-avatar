@@ -1,0 +1,10 @@
+export type Beard = 'Scruff' | 'Hipster' | 'None';
+export type Ear='Small'|'Big';
+export type Earring='Hoop'|'Stud'|'None';
+export type Eyebrows= 'None'|'Eyebrows_Down'|'Eyebrows_Up'|'Eyelashes_Down'|'Eyelashes_Up';
+export type Eyes='Circle'|'Oval'|'Smile'|'Shadow';
+export type Glasses='None'|'Round'|'Square';
+export type Hair= 'None'|'Danny_Phantom'|'Doug_Funny'|'Fonza'|'Full'|'Mr_Clean'|'Mr_T'|'Pixie'|'Turban';
+export type Mouth='Frown'|'Laughing'|'Nervous'|'Pucker'|'Sad'|'Smile'|'Smirk'|'Suprised';
+export type Nose='Curve'|'Pointed'|'Round';
+export type Shirt = 'Collared' | 'Crew' | 'Open';

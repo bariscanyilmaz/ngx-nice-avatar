@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Eyes } from '../../type';
 
 @Component({
   selector: '[ngx-eyes]',
@@ -105,5 +106,4 @@ export class EyesComponent implements OnInit {
 
 }
 
-export type Eyes='Circle'|'Oval'|'Smile'|'Shadow';
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Nose } from '../../type';
 
 @Component({
   selector: '[ngx-nose]',
@@ -43,4 +44,3 @@ export class NoseComponent implements OnInit {
 
 }
 
-export type Nose='Curve'|'Pointed'|'Round';

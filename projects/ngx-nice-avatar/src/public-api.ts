@@ -4,3 +4,4 @@
 
 export * from './lib/ngx-nice-avatar.component';
 export * from './lib/ngx-nice-avatar.module';
+export * from './lib/type';

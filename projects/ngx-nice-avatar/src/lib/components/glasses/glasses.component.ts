@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Glasses } from '../../type';
 
 @Component({
   selector: '[ngx-glasses]',
@@ -54,4 +55,3 @@ export class GlassesComponent implements OnInit {
 
 }
 
-export type Glasses='None'|'Round'|'Square';

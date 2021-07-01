@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Shirt } from '../../type';
 
 @Component({
   selector: '[ngx-shirt]',
@@ -91,4 +92,3 @@ export class ShirtComponent implements OnInit {
   }
 
 }
-export type Shirt = 'Collared' | 'Crew' | 'Open';

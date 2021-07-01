@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Ear } from '../../type';
 @Component({
   selector: '[ngx-ear]',
   template: `
@@ -65,4 +66,3 @@ export class EarComponent implements OnInit {
   }
 
 }
-export type Ear='Small'|'Big';

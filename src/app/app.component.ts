@@ -1,14 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Beard } from 'ngx-nice-avatar/lib/components/beard/beard.component';
-import { Hair } from 'ngx-nice-avatar/lib/components/hair/hair.component';
-import { Nose } from 'ngx-nice-avatar/lib/components/nose/nose.component';
-import { Ear } from 'ngx-nice-avatar/lib/components/ear/ear.component';
-import { Earring } from 'ngx-nice-avatar/lib/components/earring/earring.component';
-import { Eyebrows } from 'ngx-nice-avatar/lib/components/eyebrows/eyebrows.component';
-import { Eyes } from 'ngx-nice-avatar/lib/components/eyes/eyes.component';
-import { Mouth } from 'ngx-nice-avatar/lib/components/mouth/mouth.component';
-import { Glasses } from 'ngx-nice-avatar/lib/components/glasses/glasses.component';
-import { Shirt } from 'ngx-nice-avatar/lib/components/shirt/shirt.component';
+import { Component, OnInit } from '@angular/core';
+import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'ngx-nice-avatar/lib/type';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +11,7 @@ import { Shirt } from 'ngx-nice-avatar/lib/components/shirt/shirt.component';
     <ngx-nice-avatar 
     [size]="size" [bgColor]="bgColor" [shirtColor]="shirtColor" 
     [faceColor]="faceColor" [hairColor]="hairColor" [beardColor]="beardColor"
-    [beard]="beard" [ear]="ear" [earring]="earring" 
+    [beardType]="beard" [ear]="ear" [earring]="earring" 
     [eye]="eye" [eyeBrows]="eyeBrow" [shirt]="shirt"
     [glasses]="glasses" [nose]="nose" [hair]="hair" [hairColor]="hairColor" [mouth]="mouth"
     >

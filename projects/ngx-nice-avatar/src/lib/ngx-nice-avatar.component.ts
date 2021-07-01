@@ -1,14 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Shirt } from "./components/shirt/shirt.component";
-import { Beard } from './components/beard/beard.component';
-import { Ear } from './components/ear/ear.component';
-import { Earring } from './components/earring/earring.component';
-import { Eyebrows } from './components/eyebrows/eyebrows.component';
-import { Eyes } from './components/eyes/eyes.component';
-import { Glasses } from './components/glasses/glasses.component';
-import { Hair } from './components/hair/hair.component';
-import { Mouth } from './components/mouth/mouth.component';
-import { Nose } from './components/nose/nose.component';
+import { Ear,Earring,Beard,Nose,Glasses,Hair,Mouth,Shirt,Eyebrows,Eyes, } from "./type";
 
 @Component({
   selector: 'ngx-nice-avatar',

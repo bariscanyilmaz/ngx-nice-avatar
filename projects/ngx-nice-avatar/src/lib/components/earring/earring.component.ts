@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ear } from '../ear/ear.component';
+import { Earring,Ear } from '../../type';
+
 
 @Component({
   selector: '[ngx-earring]',
@@ -48,4 +49,3 @@ export class EarringComponent implements OnInit {
 
 }
 
-export type Earring='Hoop'|'Stud'|'None';

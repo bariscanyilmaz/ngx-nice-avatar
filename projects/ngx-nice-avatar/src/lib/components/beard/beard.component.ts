@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Beard } from '../../type';
 @Component({
   selector: '[ngx-beard]',
   template: `
@@ -462,4 +463,3 @@ export class BeardComponent implements OnInit {
 
 }
 
-export type Beard = 'Scruff' | 'Hipster' | 'None';

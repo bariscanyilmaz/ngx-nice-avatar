@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Mouth } from '../../type';
 
 @Component({
   selector: '[ngx-mouth]',
@@ -150,4 +151,3 @@ export class MouthComponent implements OnInit {
 
 }
 
-export type Mouth='Frown'|'Laughing'|'Nervous'|'Pucker'|'Sad'|'Smile'|'Smirk'|'Suprised';

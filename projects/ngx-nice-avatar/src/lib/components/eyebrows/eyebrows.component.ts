@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Eyebrows } from '../../type';
 
 @Component({
   selector: '[ngx-eyebrows]',
@@ -151,4 +152,3 @@ export class EyebrowsComponent implements OnInit {
 
 }
 
-export type Eyebrows= 'None'|'Eyebrows_Down'|'Eyebrows_Up'|'Eyelashes_Down'|'Eyelashes_Up';
