@@ -1,5 +1,10 @@
 {
   "name": "ngx-nice-avatar",
+  "author": {"name": "Barış Can Yılmaz","url": "https://github.com/bariscanyilmaz/ngx-nice-avatar"},
+  "license": "MIT License",
+  "repository": {"url": "https://github.com/bariscanyilmaz/ngx-nice-avatar","type": "git"},
+  "bugs": {"url": "https://github.com/bariscanyilmaz/ngx-nice-avatar/issues"},
+  "keywords": ["angular","avatar-creater"],
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.1.0",
