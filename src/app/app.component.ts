@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'ngx-nice-avatar/lib/type';
+import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'ngx-nice-avatar';
 
 
 @Component({
