@@ -115,7 +115,7 @@ import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'n
               type="radio"
               name="earring"
               [value]="value"
-              [ngModel]="earring"
+              [(ngModel)]="earring"
             />
             {{ value }}
           </label>
