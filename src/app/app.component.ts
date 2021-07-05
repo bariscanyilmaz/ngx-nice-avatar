@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ContentChild, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Beard, Ear, Earring, Eyebrows, Eyes, Glasses, Hair, Mouth, NgxNiceAvatarComponent, Nose, Shirt } from 'ngx-nice-avatar';
 
 
@@ -199,31 +199,31 @@ export class AppComponent implements OnInit,AfterViewInit {
   title = 'ngx-nice-avatar';
 
   size: number = 250;
-  bgColor!: string;
-  shirtColor!: string;
-  faceColor!: string;
+  bgColor: string;
+  shirtColor: string;
+  faceColor: string;
   FaceColors: string[] = ["#F9C9B6", "#AC6651"];
   beardValues: Beard[] = ['Hipster', 'Scruff', 'None'];
-  beard!: Beard;
-  beardColor!: string;
+  beard: Beard;
+  beardColor: string;
   eyesValues: Eyes[] = ['Circle', 'Oval', 'Shadow', 'Smile'];
-  eye!: Eyes;
-  eyeBrow!: Eyebrows;
+  eye: Eyes;
+  eyeBrow: Eyebrows;
   eyeBrowsValues: Eyebrows[] = ['Eyebrows_Down', 'Eyebrows_Up', 'Eyelashes_Down', 'Eyelashes_Up', 'None'];
   earValues: Ear[] = ['Big', 'Small'];
-  ear!: Ear;
+  ear: Ear;
   earringValues: Earring[] = ['Hoop', 'Stud', 'None'];
-  earring!: Earring;
-  mouth!: Mouth;
+  earring: Earring;
+  mouth: Mouth;
   mouthValues: Mouth[] = ['Frown', 'Laughing', 'Nervous', 'Pucker', 'Sad', 'Smile', 'Smirk', 'Suprised'];
-  hair!: Hair;
+  hair: Hair;
   hairValues: Hair[] = ['Danny_Phantom', 'Doug_Funny', 'Fonza', 'Full', 'Mr_Clean', 'Mr_T', 'None', 'Pixie', 'Turban'];
-  hairColor!: string;
-  nose!: Nose;
+  hairColor: string;
+  nose: Nose;
   noseValues: Nose[] = ['Curve', 'Pointed', 'Round'];
-  glasses!: Glasses;
+  glasses: Glasses;
   glassesValues: Glasses[] = ['None', 'Round', 'Square'];
-  shirt!: Shirt;
+  shirt: Shirt;
   shirtValues: Shirt[] = ['Collared', 'Crew', 'Open'];
 
   BEARD_COLORS = ["#BB9E95", "#65473E"];
