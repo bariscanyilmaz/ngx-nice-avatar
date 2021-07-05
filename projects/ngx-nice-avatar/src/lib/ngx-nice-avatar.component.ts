@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Ear,Earring,Beard,Nose,Glasses,Hair,Mouth,Shirt,Eyebrows,Eyes, } from "./type";
 
 @Component({
   selector: 'ngx-nice-avatar',
   template: `
-     <svg
+     <svg #svg
     [attr.width]="size"
     [attr.height]="size"
     viewBox="0 0 380 380"
@@ -68,10 +68,17 @@ export class NgxNiceAvatarComponent implements OnInit {
   @Input() beardType!: Beard;
   @Input() beardColor!: string;
   @Input() bgColor!: string;
+
+  @ViewChild('svg') svg:ElementRef<SVGElement>;
+
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  get element():SVGElement{
+    return this.svg.nativeElement;
   }
 
 }

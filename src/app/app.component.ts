@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'ngx-nice-avatar';
+import { AfterViewInit, Component, ContentChild, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Beard, Ear, Earring, Eyebrows, Eyes, Glasses, Hair, Mouth, NgxNiceAvatarComponent, Nose, Shirt } from 'ngx-nice-avatar';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'n
     
   <div class="screen"> 
     <div class="avatar">
-    <ngx-nice-avatar 
+    <ngx-nice-avatar #avatar
     [size]="size" [bgColor]="bgColor" [shirtColor]="shirtColor" 
     [faceColor]="faceColor" [hairColor]="hairColor" [beardColor]="beardColor"
     [beardType]="beard" [ear]="ear" [earring]="earring" 
@@ -184,10 +184,17 @@ import { Beard,Ear,Earring,Eyebrows,Eyes,Glasses,Hair,Mouth,Nose,Shirt } from 'n
       </div>
     </div>
     </div>
+    <canvas #canvas [height]="size" [width]="size" [ngStyle]="{'display':'none'}"></canvas>
   `,
   styles: []
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit,AfterViewInit {
+
+
+  @ViewChild('canvas')
+  canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('avatar')
+  avatar:NgxNiceAvatarComponent;
 
   title = 'ngx-nice-avatar';
 
@@ -273,13 +280,51 @@ export class AppComponent implements OnInit {
   }
 
   getPng() {
+    let data = (new XMLSerializer()).serializeToString(this.avatar.element);
+    let DOMURL = window.URL || window.webkitURL || window;
 
+    let img = new Image();
+    let svgBlob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' });
+    let url = DOMURL.createObjectURL(svgBlob);
+
+    img.onload = ()=> {
+      this.context.drawImage(img, 0, 0);
+      DOMURL.revokeObjectURL(url);
+
+      var imgURI = this.canvas.nativeElement
+        .toDataURL('image/png')
+        .replace('image/png', 'image/octet-stream');
+
+      this.triggerDownload(imgURI);
+    };
+    img.src = url;
+    this.context.clearRect(0,0,this.canvas.nativeElement.width,this.canvas.nativeElement.height);
   }
-
 
   ngOnInit(): void {
     this.random();
   }
 
+
+  triggerDownload(imgURI: string) {
+    var evt = new MouseEvent('click', {
+      view: window,
+      bubbles: false,
+      cancelable: true
+    });
+
+    var a = document.createElement('a');
+    a.setAttribute('download', 'avatar.png');
+    a.setAttribute('href', imgURI);
+    a.setAttribute('target', '_blank');
+
+    a.dispatchEvent(evt);
+  }
+
+  context:CanvasRenderingContext2D;
+
+  ngAfterViewInit(){
+    this.context=this.canvas.nativeElement.getContext('2d',CanvasRenderingContext2D) as CanvasRenderingContext2D;
+  }
 
 }
