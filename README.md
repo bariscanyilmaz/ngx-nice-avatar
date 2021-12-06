@@ -2,6 +2,10 @@
 
 Online Avatar Creater 
 
+## Assets
+
+* Designer / Figma files: [Avatar Illustration System](https://www.figma.com/community/file/829741575478342595)
+
 ## Installation
 
 ```sh
